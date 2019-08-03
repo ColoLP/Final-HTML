@@ -2,7 +2,9 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <meta name="author" content="Lucas Galetti">
+    <meta name="Examen Final" content="Modulo HTML">
+    <title>Examen final HTML</title>
   </head>
   <body>
     <svg width="132" height="110" xmlns="http://www.w3.org/2000/svg" name="Imagen de Logo LG">
@@ -31,5 +33,72 @@
       <a name="linkEducacion" href="educacion.html">Educacion</a>
       <a name="linkExperiencia" href="experiencia.html">Experiencia</a>
       <a name="volver" href="../index.html">Volver al Inicio</a>
+    <h2>Educacion</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <td>Año</td>
+          <td>Institucion</td>
+          <td>Lugar</td>
+          <td>¿Culmino?</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1990</td>
+          <td>Anibal Di Francia</td>
+          <td>Campana</td>
+          <td>Si</td>
+        </tr>
+        <tr>
+          <td>2009</td>
+          <td>Anibal Di Francia</td>
+          <td>Campana</td>
+          <td>Si</td>
+        </tr>
+        <tr>
+          <td>2019</td>
+          <td>Universidad Tecnologica Nacional</td>
+          <td>Campana</td>
+          <td>Si</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr >
+          <td colspan="4">Final de HTML</td>
+        </tr>
+      </tfoot>
+    </table>
+    <h2>Agregar Estudio</h2>
+    <form name="formPrincipal" action="index.html" method="post">
+      <fieldset>
+          <legend>Introduzca los Datos:</legend>
+          <label for="Año">Nombre:</label><br/>
+          <select name="Año">
+            <option value="1">1990</option>
+            <option value="2">2000</option>
+            <option value="3">2090</option>
+            <option value="4">3000</option>
+          </select><br/>
+          <label for="Institucion">Institucion:</label><br/>
+          <input type="text" name="Institucion" placeholder="UADE" required><br/>
+          <label for="lugar">Lugar:</label><br/>
+          <textarea name="lugar" rows="8" cols="80"></textarea><br/>
+          <input type="submit"  name="Enviar" value="Enviar">
+    </fieldset>
+    </form>
+    <footer>
+      <h3>Ante cualquier consulta pueden consultarme en:</h3>
+      <ol>
+        <li>Correo Electronico: lucas.galetti1991@gmail.com</li>
+        <li>Telefono: 399595959494</li>
+        <li><b>Redes Sociales:</b>
+          <ul>
+            <li>Facebook: Colox</li>
+            <li>Instagram: ColoLP</li>
+          </ul>
+        </li>
+      </ol>
+     </footer>
   </body>
 </html>
