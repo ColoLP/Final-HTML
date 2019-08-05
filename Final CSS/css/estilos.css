@@ -1,0 +1,51 @@
+/* Afecta a todos los elementos  */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: #02010a;
+}
+/* Import de tipografias */
+
+@font-face {
+font-family: 'DancinScript';
+src:url('../Font/DancingScript.otf');
+
+}
+
+/* Propiedades para el header */
+header{
+  background-color: #5b7989;
+}
+
+p{
+  font-family: 'DancinScript';
+  font-size: 1.5em;
+  color: #FFF;
+  padding: 0.6em 0 0 0.5em;
+  display: inline-flex;
+  text-shadow: 2px 2px 0 #02010a;
+  height: 2em;
+}
+
+nav{
+  display: inline-block;
+  float:  right;
+  padding:1em 0.5em 0 0;
+  font-size: 1.1em;
+  font-family: 'DancinScript';
+}
+
+/* Seccion de Articulo*/
+
+/* Seccion de Footer*/
+footer{
+
+}
+
+div[class^='caja']{
+  height: 3em;
+  background-color: rgba(21, 44, 55, 0.5);
+}
