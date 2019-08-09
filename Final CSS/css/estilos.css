@@ -4,9 +4,6 @@
   padding: 0;
 }
 
-body{
-  background-color: #02010a;
-}
 /* Import de tipografias */
 
 @font-face {
@@ -15,12 +12,90 @@ src:url('../Font/DancingScript.otf');
 
 }
 
+@-webkit-keyframes translacion{
+  from{
+    transform: translate(5px 20px);
+  }
+  to{
+    transform: translate(0);
+  }
+}
+
+@-webkit-keyframes slidein{
+  0%{
+    margin-top: 150%;
+  }
+  50%{
+    margin-top: 90%
+  }
+  80%{
+    margin-top: -5%;
+  }
+
+  100%{
+    margin-top: 0%
+  }
+}
+/* Animaciones imagenes index */
+
+@-webkit-keyframes rotacion{
+  from{
+    transform: rotate(10deg);
+  }
+  to{
+    transform: rotate(0);
+  }
+}
+
+#icono{
+  height: 1em;
+  width: 1em;
+}
+
+/* Efecto imagenes */
+
+#imgblur{
+  -webkit-filter:blur(10px);
+  filter: blur(10px);
+}
+
+#imggrayscale{
+  -webkit-filter:grayscale(100%);
+  filter: grayscale(100%);
+}
+
+#imgSepia{
+  -webkit-filter:sepia(90%)
+  filter:sepia(90%);
+}
+
+#imgIzq:hover{
+  animation: rotacion 2s
+}
+
+#imgDer:hover{
+  animation: translacion 5s
+}
+
+
+@media (min-width:900px) {
+
+body{
+  background-color: #02010a;
+  display: inline-flex ;
+  flex-direction: column;
+  width: 100%;
+  transition: 0.5s;
+  animation: slidein 1s;
+}
+
 /* Propiedades para el header */
+
 header{
   background-color: #5b7989;
 }
 
-p{
+#titulo{
   font-family: 'DancinScript';
   font-size: 1.5em;
   color: #FFF;
@@ -38,14 +113,185 @@ nav{
   font-family: 'DancinScript';
 }
 
-/* Seccion de Articulo*/
+/* Seccion de index*/
+#contenido{
+	text-align: center;
+  background-color: #82c3a6;
+  width: 100%;
+  height: 100%;
+}
 
-/* Seccion de Footer*/
-footer{
+#contenido2{
+  display: inline-flex;
+  text-align: center;
+  width: 100%;
+  height: 22em;
+  background-color:  #d5c75f ;
+  padding-top: 1em;
+}
+
+
+#imgCentral{
+  box-shadow: 2px 2px #02010a;
+  margin: 1em 0 1em 0;
+}
+
+.contenedorderecho{
+  width: 50%;
+  border: 1px bold;
+}
+.contenedorizquierdo{
+    width: 50%;
+    border: 1px bold;
+}
+
+#imgIzq{
+    height: 20em;
+    width: 30em;
+    box-shadow: 2px 2px #02010a;
+}
+
+
+#imgDer{
+  height: 20em;
+  width: 28em;
+
+  box-shadow: 2px 2px #02010a;
 
 }
 
+
+
+.pieimagen{
+  font-family: 'DancinScript';
+  font-size: 1.1em;
+  text-decoration: underline;
+}
+
+/* Seccion de Paisajes*/
+.container{
+  height: 40em;
+  background-color:  #d5c75f ;
+  flex-direction: column;
+
+}
+
+.imgContainer{
+
+  display: inline;
+  background-color:  #d5c75f ;
+  padding: 2em 0 0 5em;
+}
+
+.imgciro{
+  width: 18em;
+  height: 18em;
+  box-shadow: 2px 2px #02010a;
+  margin-top: 1em;
+}
+
+
+
+/* Seccion de Footer*/
+footer{
+  background-color: #C6d5c5;
+}
+
+.contenedor
+{
+  width: 100%;
+  display: flex;
+  height: 100%;
+}
+
 div[class^='caja']{
-  height: 3em;
   background-color: rgba(21, 44, 55, 0.5);
+  font-family: 'DancinScript';
+  text-align: center;
+  flex-direction: column;
+  width: 25%;
+  padding-top: 1em;
+}
+
+.tfooter{
+  padding-top: 0.2em;
+}
+}
+
+/* contenido Mobile*/
+@media (max-width:899px) {
+*{
+    text-align: center;
+}
+
+/* Comienza Header Mobile*/
+
+header{
+  order 1;
+  background-color: #5b7989;
+  font-family: 'DancinScript';
+  font-size: 1.5em;
+  color: #FFF;
+  text-shadow: 2px 2px 0 #02010a;
+}
+
+
+/* Comienza Body Mobile*/
+body{
+  background-color: #02010a;
+  animation: slidein 1s;
+}
+
+#imgCentral{
+  box-shadow: 2px 2px #02010a;
+  margin: 1em 0 1em 0;
+}
+
+#contenido{
+  background-color: #82c3a6;
+
+}
+
+#contenido2{
+  background-color:  #d5c75f ;
+  padding-top: 1em;
+}
+
+img[class^='imgc']{
+  width: 100%;
+  height: 15em;
+  width: 20em;
+  box-shadow: 2px 2px #02010a;
+}
+
+.container{
+  background-color:  #d5c75f ;
+}
+
+.imgContainer{
+  padding: 1.5em 0 1.5em 0;
+}
+
+div[class^='caja']{
+  order:2;
+  background-color: rgba(21, 44, 55, 0.5);
+  font-family: 'DancinScript';
+  text-align: center;
+  width: 100%;
+
+}
+
+p[class^='pie']{
+  font-family: 'DancinScript';
+  font-size: 1.3em;
+}
+
+footer{
+  order:3;
+  font-family: 'DancinScript';
+  font-size: 1.5em;
+  background-color: #C6d5c5;
+  height: 100%;
+}
+
 }
